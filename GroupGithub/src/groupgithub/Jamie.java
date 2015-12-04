@@ -39,7 +39,7 @@ public class Jamie {
         }
         return false;
     }
-    public static String[][] fourNumberMultiply(String grid)
+    /*public static String[][] fourNumberMultiply(String grid)
     {
         try
         {
@@ -60,5 +60,5 @@ public class Jamie {
         {
             System.out.println("Error: " + e);
         }
-    }
+    }*/
 }
