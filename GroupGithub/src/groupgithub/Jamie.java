@@ -39,17 +39,17 @@ public class Jamie {
         }
         return false;
     }
-    public static void fourNumberMultiply()
+    public static void fourMultiplyHighest()
     {
         try
         {
             FileReader fr = new FileReader("src\\groupgithub\\DataGrid1.txt");
             BufferedReader br = new BufferedReader(fr);
-            String[][] numberGrid = new String[20][20];
-
+            String[][] stringGrid = new String[20][20];
+            int numberGrid[][] = new int[20][20];
             for (int i = 1; i <= 10; i++)
             {
-                numberGrid[i] = br.readLine().split(" ");
+                stringGrid[i] = br.readLine().split(" ");
             }
         }
         catch (IOException e)
