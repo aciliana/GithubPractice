@@ -39,21 +39,17 @@ public class Jamie {
         }
         return false;
     }
-    public static String[][] fourNumberMultiply(String grid)
+    public static void fourNumberMultiply()
     {
         try
         {
             FileReader fr = new FileReader("src\\groupgithub\\DataGrid1.txt");
             BufferedReader br = new BufferedReader(fr);
             String[][] numberGrid = new String[20][20];
-            String line;
+
             for (int i = 1; i <= 10; i++)
             {
-                line = br.readLine();
-                for (int j = 1; i <= 10; i++)
-                {
-                
-                }
+                numberGrid[i] = br.readLine().split(" ");
             }
         }
         catch (IOException e)
