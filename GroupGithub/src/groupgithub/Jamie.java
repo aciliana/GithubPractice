@@ -8,7 +8,7 @@ package groupgithub;
 import java.io.*;
 /**
  *
- * @author alicia
+ * @author JAMIE
  */
 public class Jamie {
      public static boolean creditCardChecker(String credNum)
@@ -33,11 +33,7 @@ public class Jamie {
             sum += tempNum;
         }
         
-        if (sum % 10 == 0)
-        {
-            return true;
-        }
-        return false;
+        return sum % 10 == 0;
     }
     public static String[][] fourNumberMultiply(String grid)
     {
