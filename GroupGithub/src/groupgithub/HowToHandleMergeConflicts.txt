@@ -1,0 +1,15 @@
+If a merge conflict occurs it you will most likely be brought to an editor called VI
+
+There are two modes to vi, insert and command
+    - it will tell you in the bottom bar
+    - to enter inster mode and write something press 'i'
+    - to leave enter command mode press Esc
+
+Commands
+    - :q will quit
+    - :w will save
+    - :wq will save + quit
+
+To handle the merge conflict you will most likely need to write some message out then save and quit
+If that ^ doesnt work google it lol
+
