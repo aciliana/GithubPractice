@@ -243,11 +243,22 @@ public class Jamie {
                 {
                     currentNumber += "and";
                 }
-                //got 1s to 100s
-                //onto above 100s
-                //
-                //
-                //
+                if (i % 1000 >= 100)
+                {
+                    currentNumber += "hundred";
+                    if (i % 1000 <= 299 || (i % 1000 >= 600 && i % 1000 <= 699))
+                    {
+                        currentNumber += "lol";
+                    }
+                    else if ((i % 1000 <= 400 && i % 1000 >= 599) || i % 1000 >= 900)
+                    {
+                        currentNumber += "lolo";
+                    }
+                    else if (i % 1000 <= 300 && i % 1000 >= 399 || (i % 1000 >= 700 && i % 1000 <= 899))
+                    {
+                        
+                    }
+                }
             }
         }
     }
