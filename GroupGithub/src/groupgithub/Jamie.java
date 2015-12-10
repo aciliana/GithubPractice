@@ -59,7 +59,7 @@ public class Jamie {
             int currentProduct = 0;
             for (int i = 0; i <= 19; i++)
             {
-                //horizontal
+                //vertical
                 if (i <= 16)
                 {
                     for (int j = 0; j <= 19; j++)
@@ -70,19 +70,7 @@ public class Jamie {
                             greatestProduct = currentProduct;
                         }
                     }
-                }
-                //vertical
-                for (int k = 0; k <= 16; k++)
-                {
-                    currentProduct = numberGrid[i][k] * numberGrid[i][k+1] * numberGrid[i][k+2] * numberGrid[i][k+3];
-                    if (currentProduct > greatestProduct)
-                    {
-                         greatestProduct = currentProduct;
-                    }
-                }
-                //up left to down right
-                if (i <= 16)
-                {
+                    //up left to down right
                     for (int m = 0; m <= 16; m++)
                     {
                         currentProduct = numberGrid[i][m] * numberGrid[i+1][m+1] * numberGrid[i+2][m+2] * numberGrid[i+3][m+3];
@@ -91,10 +79,7 @@ public class Jamie {
                             greatestProduct = currentProduct;
                         }
                     }
-                }
-                //up right to down left
-                if (i <= 16 )
-                {
+                    //up right to down left
                     for (int n = 3; n <= 19; n++)
                     {
                         currentProduct = numberGrid[i][n] * numberGrid[i+1][n-1] * numberGrid[i+2][n-2] * numberGrid[i+3][n-3];
@@ -104,6 +89,17 @@ public class Jamie {
                         }
                     }
                 }
+                //horizontal
+                for (int k = 0; k <= 16; k++)
+                {
+                    currentProduct = numberGrid[i][k] * numberGrid[i][k+1] * numberGrid[i][k+2] * numberGrid[i][k+3];
+                    if (currentProduct > greatestProduct)
+                    {
+                         greatestProduct = currentProduct;
+                    }
+                }
+                
+                
             }
             br.close();
             System.out.println(greatestProduct);
