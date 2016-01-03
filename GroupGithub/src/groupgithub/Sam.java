@@ -7,7 +7,6 @@ package groupgithub;
 import java.io.*;
 
 public class Sam {
-
     public static boolean lunhs(String str) {
         int[] nums = new int[str.length()];
         for (int i = 0; i < str.length(); i++) {

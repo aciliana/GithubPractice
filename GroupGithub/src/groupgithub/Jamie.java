@@ -8,7 +8,7 @@ package groupgithub;
 import java.io.*;
 /**
  *
- * @author alicia
+ * @author JAMIE
  */
 public class Jamie {
      public static boolean creditCardChecker(String credNum)
@@ -33,11 +33,7 @@ public class Jamie {
             sum += tempNum;
         }
         
-        if (sum % 10 == 0)
-        {
-            return true;
-        }
-        return false;
+        return sum % 10 == 0;
     }
     public static void fourMultiplyHighest()
     {
@@ -59,7 +55,7 @@ public class Jamie {
             int currentProduct = 0;
             for (int i = 0; i <= 19; i++)
             {
-                //horizontal
+                //vertical
                 if (i <= 16)
                 {
                     for (int j = 0; j <= 19; j++)
@@ -70,19 +66,7 @@ public class Jamie {
                             greatestProduct = currentProduct;
                         }
                     }
-                }
-                //vertical
-                for (int k = 0; k <= 16; k++)
-                {
-                    currentProduct = numberGrid[i][k] * numberGrid[i][k+1] * numberGrid[i][k+2] * numberGrid[i][k+3];
-                    if (currentProduct > greatestProduct)
-                    {
-                         greatestProduct = currentProduct;
-                    }
-                }
-                //up left to down right
-                if (i <= 16)
-                {
+                    //up left to down right
                     for (int m = 0; m <= 16; m++)
                     {
                         currentProduct = numberGrid[i][m] * numberGrid[i+1][m+1] * numberGrid[i+2][m+2] * numberGrid[i+3][m+3];
@@ -91,10 +75,7 @@ public class Jamie {
                             greatestProduct = currentProduct;
                         }
                     }
-                }
-                //up right to down left
-                if (i <= 16 )
-                {
+                    //up right to down left
                     for (int n = 3; n <= 19; n++)
                     {
                         currentProduct = numberGrid[i][n] * numberGrid[i+1][n-1] * numberGrid[i+2][n-2] * numberGrid[i+3][n-3];
@@ -104,6 +85,17 @@ public class Jamie {
                         }
                     }
                 }
+                //horizontal
+                for (int k = 0; k <= 16; k++)
+                {
+                    currentProduct = numberGrid[i][k] * numberGrid[i][k+1] * numberGrid[i][k+2] * numberGrid[i][k+3];
+                    if (currentProduct > greatestProduct)
+                    {
+                         greatestProduct = currentProduct;
+                    }
+                }
+                
+                
             }
             br.close();
             System.out.println(greatestProduct);
@@ -251,11 +243,22 @@ public class Jamie {
                 {
                     currentNumber += "and";
                 }
-                //got 1s to 100s
-                //onto above 100s
-                //
-                //
-                //
+                if (i % 1000 >= 100)
+                {
+                    currentNumber += "hundred";
+                    if (i % 1000 <= 299 || (i % 1000 >= 600 && i % 1000 <= 699))
+                    {
+                        currentNumber += "lol";
+                    }
+                    else if ((i % 1000 <= 400 && i % 1000 >= 599) || i % 1000 >= 900)
+                    {
+                        currentNumber += "lolo";
+                    }
+                    else if (i % 1000 <= 300 && i % 1000 >= 399 || (i % 1000 >= 700 && i % 1000 <= 899))
+                    {
+                        
+                    }
+                }
             }
         }
     }
